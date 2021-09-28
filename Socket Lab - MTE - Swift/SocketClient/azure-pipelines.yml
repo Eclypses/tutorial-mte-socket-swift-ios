@@ -9,10 +9,10 @@ trigger:
     - master
   paths:
     include:
-    - Socket Lab - iOS - Swift/Socket Lab - MTE - Swift/SocketClient
+    - Socket Lab - MTE - Swift/SocketClient
 
 variables:
-    projDir: 'lab-mte-socket/Socket Lab - iOS - Swift/Socket Lab - MTE - Swift'
+    projDir: 'lab-socket-ios-swift/Socket Lab - MTE - Swift'
     system_accesstoken: $(System.AccessToken)
     scheme: 'SocketClient'
     sdk: 'iphonesimulator'
@@ -44,10 +44,10 @@ steps:
   clean: true
     
 - task: CopyFiles@2
-  displayName: 'Copy MTE Library Files'
+  displayName: 'Copy MTE Library Framework'
   inputs:
-    SourceFolder: 'mte-lib/lib'
-    Contents: '**'
+    SourceFolder: 'mte-lib/Sources/Mte'
+    Contents: 'mte.xcframework/**'
     TargetFolder: '$(projDir)/MTE/lib'
     CleanTargetFolder: true
     OverWrite: true
@@ -55,7 +55,7 @@ steps:
 - task: CopyFiles@2
   displayName: 'Copy MTE Header Files'
   inputs:
-    SourceFolder: 'mte-lib/include'
+    SourceFolder: 'mte-lib/Sources/Mte/include'
     Contents: '**'
     TargetFolder: '$(projDir)/MTE/include'
     CleanTargetFolder: true
@@ -65,7 +65,7 @@ steps:
   displayName: 'Copy MTE Wrapper Files'
   inputs:
     SourceFolder: 'package-swift-mte'
-    Contents: 'Core/**' 
+    Contents: 'Core/**'
     TargetFolder: '$(projDir)/MTE'
     flattenFolders: true
     CleanTargetFolder: false
@@ -79,6 +79,6 @@ steps:
     sdk: '$(sdk)'
     configuration: '$(configuration)'
     xcodeVersion: 'default' # Options: 8, 9, default, specifyPath
-    xcWorkspacePath: 'lab-mte-socket/Socket Lab - iOS - Swift/Socket Lab - MTE - Swift/SocketClient/$(workspace)'
+    xcWorkspacePath: '$(projDir)/SocketClient/$(workspace)'
     exportPath: '$(agent.buildDirectory)/output/$(sdk)/$(configuration)'
 

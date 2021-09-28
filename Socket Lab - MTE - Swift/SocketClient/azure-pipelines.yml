@@ -1,0 +1,84 @@
+# Xcode
+# Build, test, and archive an Xcode workspace on macOS.
+# Add steps that install certificates, test, sign, and distribute an app, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/xcode
+
+trigger:
+  branches:
+    include:
+    - master
+  paths:
+    include:
+    - Socket Lab - iOS - Swift/Socket Lab - MTE - Swift/SocketClient
+
+variables:
+    projDir: 'lab-mte-socket/Socket Lab - iOS - Swift/Socket Lab - MTE - Swift'
+    system_accesstoken: $(System.AccessToken)
+    scheme: 'SocketClient'
+    sdk: 'iphonesimulator'
+    configuration: 'Debug'
+    workspace: 'SocketClient.xcodeproj'
+
+resources:
+  repositories:
+  - repository: mtelib
+    type: git
+    name: Eclypses/mte-lib
+  - repository: mtewrapper
+    type: git
+    name: Eclypses/package-swift-mte
+
+pool: 'MTE-MacOS'
+
+steps:
+
+- checkout: self
+  displayName: 'Checkout SocketClient'
+  clean: true
+  persistCredentials: true
+- checkout: mtelib
+  displayName: 'Checkout Mte Library Framework'
+  clean: true
+- checkout: mtewrapper
+  displayName: 'Checkout Mte Wrapper Files'
+  clean: true
+    
+- task: CopyFiles@2
+  displayName: 'Copy MTE Library Files'
+  inputs:
+    SourceFolder: 'mte-lib/lib'
+    Contents: '**'
+    TargetFolder: '$(projDir)/MTE/lib'
+    CleanTargetFolder: true
+    OverWrite: true
+    
+- task: CopyFiles@2
+  displayName: 'Copy MTE Header Files'
+  inputs:
+    SourceFolder: 'mte-lib/include'
+    Contents: '**'
+    TargetFolder: '$(projDir)/MTE/include'
+    CleanTargetFolder: true
+    OverWrite: true
+
+- task: CopyFiles@2
+  displayName: 'Copy MTE Wrapper Files'
+  inputs:
+    SourceFolder: 'package-swift-mte'
+    Contents: 'Core/**' 
+    TargetFolder: '$(projDir)/MTE'
+    flattenFolders: true
+    CleanTargetFolder: false
+    OverWrite: true
+
+- task: Xcode@5
+  displayName: 'Build And Test SocketClient'
+  inputs:
+    actions: 'clean build'
+    scheme: '$(scheme)'
+    sdk: '$(sdk)'
+    configuration: '$(configuration)'
+    xcodeVersion: 'default' # Options: 8, 9, default, specifyPath
+    xcWorkspacePath: 'lab-mte-socket/Socket Lab - iOS - Swift/Socket Lab - MTE - Swift/SocketClient/$(workspace)'
+    exportPath: '$(agent.buildDirectory)/output/$(sdk)/$(configuration)'
+

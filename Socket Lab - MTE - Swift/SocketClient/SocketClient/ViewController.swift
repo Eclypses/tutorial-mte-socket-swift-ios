@@ -42,7 +42,7 @@ class ViewController: UIViewController{
     // Initial Values
     var entropy: [UInt8]!
     let encoderNonce: UInt64 = 1
-    let decoderNonce: UInt64 = 0
+    var decoderNonce: UInt64 = 0
     let personalizationString: String = "demo"
     
     // Options.

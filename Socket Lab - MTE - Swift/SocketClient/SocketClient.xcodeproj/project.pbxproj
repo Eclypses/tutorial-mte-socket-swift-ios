@@ -23,7 +23,18 @@
 		D075192E26152BFC0091CFB3 /* mte.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D075192D26152BFC0091CFB3 /* mte.xcframework */; };
 		D0F83D482703AB6200096BA6 /* iOS Swift - Update MTE Version and Language Wrapper.docx in Resources */ = {isa = PBXBuildFile; fileRef = D0F83D462703AB6200096BA6 /* iOS Swift - Update MTE Version and Language Wrapper.docx */; };
 		D0F83D4A2703AC5900096BA6 /* azure-pipelines.yml in Resources */ = {isa = PBXBuildFile; fileRef = D0F83D492703AC5900096BA6 /* azure-pipelines.yml */; };
+		D0F83D522704B76900096BA6 /* SocketClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F83D512704B76900096BA6 /* SocketClientTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D0F83D532704B76900096BA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D07518A92613E2E10091CFB3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D07518B02613E2E10091CFB3;
+			remoteInfo = SocketClient;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D01743C0267C11A10038C06A /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
@@ -64,6 +75,8 @@
 		D0F83D462703AB6200096BA6 /* iOS Swift - Update MTE Version and Language Wrapper.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iOS Swift - Update MTE Version and Language Wrapper.docx"; sourceTree = "<group>"; };
 		D0F83D472703AB6200096BA6 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		D0F83D492703AC5900096BA6 /* azure-pipelines.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = "azure-pipelines.yml"; sourceTree = "<group>"; };
+		D0F83D4F2704B76900096BA6 /* SocketClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocketClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0F83D512704B76900096BA6 /* SocketClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketClientTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +85,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D075192E26152BFC0091CFB3 /* mte.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0F83D4C2704B76900096BA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +105,7 @@
 				D07518FD26152A160091CFB3 /* MTE */,
 				D07518DF26150C8F0091CFB3 /* Common */,
 				D07518B32613E2E10091CFB3 /* SocketClient */,
+				D0F83D502704B76900096BA6 /* SocketClientTests */,
 				D07518B22613E2E10091CFB3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				D07518B12613E2E10091CFB3 /* SocketClient.app */,
+				D0F83D4F2704B76900096BA6 /* SocketClientTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -180,6 +202,14 @@
 			path = lib;
 			sourceTree = "<group>";
 		};
+		D0F83D502704B76900096BA6 /* SocketClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				D0F83D512704B76900096BA6 /* SocketClientTests.swift */,
+			);
+			path = SocketClientTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -200,18 +230,40 @@
 			productReference = D07518B12613E2E10091CFB3 /* SocketClient.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D0F83D4E2704B76900096BA6 /* SocketClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0F83D572704B76900096BA6 /* Build configuration list for PBXNativeTarget "SocketClientTests" */;
+			buildPhases = (
+				D0F83D4B2704B76900096BA6 /* Sources */,
+				D0F83D4C2704B76900096BA6 /* Frameworks */,
+				D0F83D4D2704B76900096BA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0F83D542704B76900096BA6 /* PBXTargetDependency */,
+			);
+			name = SocketClientTests;
+			productName = SocketClientTests;
+			productReference = D0F83D4F2704B76900096BA6 /* SocketClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		D07518A92613E2E10091CFB3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
+				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "Eclypses Inc.";
 				TargetAttributes = {
 					D07518B02613E2E10091CFB3 = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					D0F83D4E2704B76900096BA6 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = D07518B02613E2E10091CFB3;
 					};
 				};
 			};
@@ -229,6 +281,7 @@
 			projectRoot = "";
 			targets = (
 				D07518B02613E2E10091CFB3 /* SocketClient */,
+				D0F83D4E2704B76900096BA6 /* SocketClientTests */,
 			);
 		};
 /* End PBXProject section */
@@ -243,6 +296,13 @@
 				D07518C12613E2E40091CFB3 /* LaunchScreen.storyboard in Resources */,
 				D07518BE2613E2E40091CFB3 /* Assets.xcassets in Resources */,
 				D07518BC2613E2E10091CFB3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0F83D4D2704B76900096BA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +326,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D0F83D4B2704B76900096BA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0F83D522704B76900096BA6 /* SocketClientTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D0F83D542704B76900096BA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D07518B02613E2E10091CFB3 /* SocketClient */;
+			targetProxy = D0F83D532704B76900096BA6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D07518BA2613E2E10091CFB3 /* Main.storyboard */ = {
@@ -450,6 +526,56 @@
 			};
 			name = Release;
 		};
+		D0F83D552704B76900096BA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8V98ZVB9SU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eclypses.SocketClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocketClient.app/SocketClient";
+			};
+			name = Debug;
+		};
+		D0F83D562704B76900096BA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8V98ZVB9SU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eclypses.SocketClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocketClient.app/SocketClient";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -467,6 +593,15 @@
 			buildConfigurations = (
 				D07518C62613E2E40091CFB3 /* Debug */,
 				D07518C72613E2E40091CFB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0F83D572704B76900096BA6 /* Build configuration list for PBXNativeTarget "SocketClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0F83D552704B76900096BA6 /* Debug */,
+				D0F83D562704B76900096BA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

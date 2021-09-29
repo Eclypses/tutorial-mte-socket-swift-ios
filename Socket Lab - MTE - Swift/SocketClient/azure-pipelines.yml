@@ -72,9 +72,9 @@ steps:
     OverWrite: true
 
 - task: Xcode@5
-  displayName: 'Build And Test SocketClient'
+  displayName: 'Clean, Build And Test SocketClient'
   inputs:
-    actions: 'clean build'
+    actions: 'clean build test'
     scheme: '$(scheme)'
     sdk: '$(sdk)'
     configuration: '$(configuration)'

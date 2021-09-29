@@ -80,5 +80,7 @@ steps:
     configuration: '$(configuration)'
     xcodeVersion: 'default' # Options: 8, 9, default, specifyPath
     xcWorkspacePath: '$(projDir)/SocketClient/$(workspace)'
+    destinationPlatformOption: 'iOS'
+    destinationSimulators: 'iPhone 11 Pro Max'
     exportPath: '$(agent.buildDirectory)/output/$(sdk)/$(configuration)'
 

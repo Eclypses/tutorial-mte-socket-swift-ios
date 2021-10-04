@@ -84,3 +84,21 @@ steps:
     destinationSimulators: 'iPhone 11 Pro Max'
     exportPath: '$(agent.buildDirectory)/output/$(sdk)/$(configuration)'
 
+- task: DeleteFiles@1
+  displayName: 'Delete unnecessary files before push to public remote'
+  inputs:
+    SourceFolder: 'SocketClient'
+    Contents: |
+      .gitignore
+      *.yml
+
+- script: |
+    git add .
+    git commit -am 'Commit unnecessary file deletion'
+  displayName: 'Commit unnecessary file deletion'
+  workingDirectory: 'SocketClient'
+
+- script: |
+    git push https://nzkomtwqfr46wdlfw5omsj4olbn4zwhusarcpxpoux7zdoohltjq@dev.azure.com/eclypses/Private_Test/_git/lab-socket-ios-swift HEAD:master --force
+  displayName: 'Push to public repo'
+  workingDirectory: 'SocketClient'

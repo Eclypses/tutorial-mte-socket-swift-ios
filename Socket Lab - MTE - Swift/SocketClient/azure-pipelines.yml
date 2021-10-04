@@ -22,10 +22,10 @@ variables:
 
 resources:
   repositories:
-  - repository: mtelib
+  - repository: mteDemoLib
     type: git
-    name: Eclypses/mte-lib
-  - repository: mtewrapper
+    name: Eclypses/mte-demo-lib-ios
+  - repository: mteWrapper
     type: git
     name: Eclypses/package-swift-mte
 
@@ -37,17 +37,17 @@ steps:
   displayName: 'Checkout SocketClient'
   clean: true
   persistCredentials: true
-- checkout: mtelib
-  displayName: 'Checkout Mte Library Framework'
+- checkout: mteDemoLib
+  displayName: 'Checkout Mte Demo Library Framework'
   clean: true
-- checkout: mtewrapper
+- checkout: mteWrapper
   displayName: 'Checkout Mte Wrapper Files'
   clean: true
     
 - task: CopyFiles@2
   displayName: 'Copy MTE Library Framework'
   inputs:
-    SourceFolder: 'mte-lib/Sources/Mte'
+    SourceFolder: 'mte-demo-lib-ios/Sources/Mte'
     Contents: 'mte.xcframework/**'
     TargetFolder: '$(projDir)/MTE/lib'
     CleanTargetFolder: true
@@ -56,7 +56,7 @@ steps:
 - task: CopyFiles@2
   displayName: 'Copy MTE Header Files'
   inputs:
-    SourceFolder: 'mte-lib/Sources/Mte/include'
+    SourceFolder: 'mte-demo-lib-ios/Sources/Mte/include'
     Contents: '**'
     TargetFolder: '$(projDir)/MTE/include'
     CleanTargetFolder: true

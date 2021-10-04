@@ -91,7 +91,7 @@ steps:
     SourceFolder: $(repoName)
     Contents: |
       .gitignore
-      *.yml
+      **/*.yml
 
 - script: |
     git add .

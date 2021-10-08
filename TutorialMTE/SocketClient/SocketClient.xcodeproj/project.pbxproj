@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D01743C1267C11A10038C06A /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01743C0267C11A10038C06A /* Enums.swift */; };
-		D039E0D42710B46800257406 /* SwiftMTE in Frameworks */ = {isa = PBXBuildFile; productRef = D039E0D32710B46800257406 /* SwiftMTE */; };
 		D039E0D72710B53800257406 /* mte.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D039E0D62710B53800257406 /* mte.xcframework */; };
-		D039E0D82710B53800257406 /* mte.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D039E0D62710B53800257406 /* mte.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D039E0DC2710E07300257406 /* SwiftMTE in Frameworks */ = {isa = PBXBuildFile; productRef = D039E0DB2710E07300257406 /* SwiftMTE */; };
 		D07518B52613E2E10091CFB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07518B42613E2E10091CFB3 /* AppDelegate.swift */; };
 		D07518B72613E2E10091CFB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07518B62613E2E10091CFB3 /* SceneDelegate.swift */; };
 		D07518B92613E2E10091CFB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07518B82613E2E10091CFB3 /* ViewController.swift */; };
@@ -33,20 +32,6 @@
 			remoteInfo = SocketClient;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		D039E0D92710B53800257406 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				D039E0D82710B53800257406 /* mte.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D01743C0267C11A10038C06A /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
@@ -73,7 +58,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D039E0D72710B53800257406 /* mte.xcframework in Frameworks */,
-				D039E0D42710B46800257406 /* SwiftMTE in Frameworks */,
+				D039E0DC2710E07300257406 /* SwiftMTE in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,7 +153,6 @@
 				D07518AD2613E2E10091CFB3 /* Sources */,
 				D07518AE2613E2E10091CFB3 /* Frameworks */,
 				D07518AF2613E2E10091CFB3 /* Resources */,
-				D039E0D92710B53800257406 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -176,7 +160,7 @@
 			);
 			name = SocketClient;
 			packageProductDependencies = (
-				D039E0D32710B46800257406 /* SwiftMTE */,
+				D039E0DB2710E07300257406 /* SwiftMTE */,
 			);
 			productName = SocketClient;
 			productReference = D07518B12613E2E10091CFB3 /* SocketClient.app */;
@@ -229,7 +213,7 @@
 			);
 			mainGroup = D07518A82613E2E10091CFB3;
 			packageReferences = (
-				D039E0D22710B46700257406 /* XCRemoteSwiftPackageReference "package-swift-mte-ios" */,
+				D039E0DA2710E07300257406 /* XCRemoteSwiftPackageReference "package-swift-mte-ios" */,
 			);
 			productRefGroup = D07518B22613E2E10091CFB3 /* Products */;
 			projectDirPath = "";
@@ -560,7 +544,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D039E0D22710B46700257406 /* XCRemoteSwiftPackageReference "package-swift-mte-ios" */ = {
+		D039E0DA2710E07300257406 /* XCRemoteSwiftPackageReference "package-swift-mte-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://cos-ado.eclypses.com/DefaultCollection/Eclypses/_git/package-swift-mte-ios";
 			requirement = {
@@ -571,9 +555,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D039E0D32710B46800257406 /* SwiftMTE */ = {
+		D039E0DB2710E07300257406 /* SwiftMTE */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D039E0D22710B46700257406 /* XCRemoteSwiftPackageReference "package-swift-mte-ios" */;
+			package = D039E0DA2710E07300257406 /* XCRemoteSwiftPackageReference "package-swift-mte-ios" */;
 			productName = SwiftMTE;
 		};
 /* End XCSwiftPackageProductDependency section */

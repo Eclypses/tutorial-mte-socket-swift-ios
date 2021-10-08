@@ -20,57 +20,57 @@ variables:
     configuration: 'Debug'
     workspace: 'SocketClient.xcodeproj'
 
-resources:
-  repositories:
-  - repository: mteDemoLib
-    type: git
-    name: Eclypses/package-mte-trial-lib-ios
-  - repository: mteWrapper
-    type: git
-    name: Eclypses/package-swift-mte-ios
+# resources:
+#   repositories:
+#   - repository: mteDemoLib
+#     type: git
+#     name: Eclypses/package-mte-trial-lib-ios
+#   - repository: mteWrapper
+#     type: git
+#     name: Eclypses/package-swift-mte-ios
 
 pool: 'MTE-MacOS'
 
 steps:
 
-- checkout: self
-  displayName: 'Checkout SocketClient'
-  clean: true
-  persistCredentials: true
-- checkout: mteDemoLib
-  displayName: 'Checkout Mte Trial Library Framework'
-  clean: true
-- checkout: mteWrapper
-  displayName: 'Checkout Mte Wrapper Files'
-  clean: true
+# - checkout: self
+#   displayName: 'Checkout SocketClient'
+#   clean: true
+#   persistCredentials: true
+# - checkout: mteDemoLib
+#   displayName: 'Checkout Mte Trial Library Framework'
+#   clean: true
+# - checkout: mteWrapper
+#   displayName: 'Checkout Mte Wrapper Files'
+#   clean: true
     
-- task: CopyFiles@2
-  displayName: 'Copy MTE Library Framework'
-  inputs:
-    SourceFolder: 'package-mte-trial-lib-ios/Sources/Mte'
-    Contents: 'mte.xcframework/**'
-    TargetFolder: '$(projDir)/MTE/lib'
-    CleanTargetFolder: true
-    OverWrite: true
+# - task: CopyFiles@2
+#   displayName: 'Copy MTE Library Framework'
+#   inputs:
+#     SourceFolder: 'package-mte-trial-lib-ios/Sources/Mte'
+#     Contents: 'mte.xcframework/**'
+#     TargetFolder: '$(projDir)/MTE/lib'
+#     CleanTargetFolder: true
+#     OverWrite: true
     
-- task: CopyFiles@2
-  displayName: 'Copy MTE Header Files'
-  inputs:
-    SourceFolder: 'package-mte-trial-lib-ios/Sources/Mte/include'
-    Contents: '**'
-    TargetFolder: '$(projDir)/MTE/include'
-    CleanTargetFolder: true
-    OverWrite: true
+# - task: CopyFiles@2
+#   displayName: 'Copy MTE Header Files'
+#   inputs:
+#     SourceFolder: 'package-mte-trial-lib-ios/Sources/Mte/include'
+#     Contents: '**'
+#     TargetFolder: '$(projDir)/MTE/include'
+#     CleanTargetFolder: true
+#     OverWrite: true
 
-- task: CopyFiles@2
-  displayName: 'Copy MTE Wrapper Files'
-  inputs:
-    SourceFolder: 'package-swift-mte-ios'
-    Contents: 'Core/**'
-    TargetFolder: '$(projDir)/MTE'
-    flattenFolders: true
-    CleanTargetFolder: false
-    OverWrite: true
+# - task: CopyFiles@2
+#   displayName: 'Copy MTE Wrapper Files'
+#   inputs:
+#     SourceFolder: 'package-swift-mte-ios'
+#     Contents: 'Core/**'
+#     TargetFolder: '$(projDir)/MTE'
+#     flattenFolders: true
+#     CleanTargetFolder: false
+#     OverWrite: true
 
 - task: Xcode@5
   displayName: 'Clean, Build And Test SocketClient'

@@ -35,7 +35,7 @@
 
 /* Begin PBXFileReference section */
 		D01743C0267C11A10038C06A /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
-		D039E0D62710B53800257406 /* mte.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = mte.xcframework; path = "../../../../../Library/Developer/Xcode/DerivedData/SocketClient-aejhncusbfonkudfrwaayxthylxc/SourcePackages/checkouts/package-mte-trial-lib-ios/Sources/Mte/mte.xcframework"; sourceTree = "<group>"; };
+		D039E0D62710B53800257406 /* mte.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = mte.xcframework; path = "../../../SourcePackages/checkouts/package-mte-trial-lib-ios/Sources/Mte/mte.xcframework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D07518B12613E2E10091CFB3 /* SocketClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocketClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D07518B42613E2E10091CFB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D07518B62613E2E10091CFB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };

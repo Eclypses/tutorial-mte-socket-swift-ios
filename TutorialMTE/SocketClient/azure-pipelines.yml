@@ -9,7 +9,7 @@ trigger:
     - master
   paths:
     include:
-    - Socket Lab - MTE - Swift/SocketClient
+    - TutorialMTE/SocketClient
 
 variables:
     repoName: 'tutorial-mte-socket-swift-ios'

@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Mte",
+        "repositoryURL": "https://cos-ado.eclypses.com/DefaultCollection/Eclypses/_git/package-mte-trial-lib-ios",
+        "state": {
+          "branch": null,
+          "revision": "c56f9db778a4bed97059153c16fd54bbb9fd7587",
+          "version": "1.5.0"
+        }
+      },
+      {
+        "package": "SwiftMTE",
+        "repositoryURL": "https://cos-ado.eclypses.com/DefaultCollection/Eclypses/_git/package-swift-mte-ios",
+        "state": {
+          "branch": "master",
+          "revision": "808a73d0ba4214451facfb7efeb1953917708a0a",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

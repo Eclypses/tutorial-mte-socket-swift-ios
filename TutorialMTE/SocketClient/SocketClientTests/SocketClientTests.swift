@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import SocketClient
+import Mte
 
 class SocketClientTests: XCTestCase {
     

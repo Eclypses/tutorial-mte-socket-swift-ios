@@ -12,8 +12,8 @@ trigger:
     - Socket Lab - MTE - Swift/SocketClient
 
 variables:
-    repoName: 'lab-socket-ios-swift'
-    projDir: 'lab-socket-ios-swift/Socket Lab - MTE - Swift'
+    repoName: 'tutorial-mte-socket-swift-ios'
+    projDir: '$(repoName)/TutorialMTE'
     system_accesstoken: $(System.AccessToken)
     scheme: 'SocketClient'
     sdk: 'iphonesimulator'
@@ -24,10 +24,10 @@ resources:
   repositories:
   - repository: mteDemoLib
     type: git
-    name: Eclypses/mte-demo-lib-ios
+    name: Eclypses/package-mte-trial-lib-ios
   - repository: mteWrapper
     type: git
-    name: Eclypses/package-swift-mte
+    name: Eclypses/package-swift-mte-ios
 
 pool: 'MTE-MacOS'
 
@@ -38,7 +38,7 @@ steps:
   clean: true
   persistCredentials: true
 - checkout: mteDemoLib
-  displayName: 'Checkout Mte Demo Library Framework'
+  displayName: 'Checkout Mte Trial Library Framework'
   clean: true
 - checkout: mteWrapper
   displayName: 'Checkout Mte Wrapper Files'
@@ -47,7 +47,7 @@ steps:
 - task: CopyFiles@2
   displayName: 'Copy MTE Library Framework'
   inputs:
-    SourceFolder: 'mte-demo-lib-ios/Sources/Mte'
+    SourceFolder: 'package-mte-trial-lib-ios/Sources/Mte'
     Contents: 'mte.xcframework/**'
     TargetFolder: '$(projDir)/MTE/lib'
     CleanTargetFolder: true
@@ -56,7 +56,7 @@ steps:
 - task: CopyFiles@2
   displayName: 'Copy MTE Header Files'
   inputs:
-    SourceFolder: 'mte-demo-lib-ios/Sources/Mte/include'
+    SourceFolder: 'package-mte-trial-lib-ios/Sources/Mte/include'
     Contents: '**'
     TargetFolder: '$(projDir)/MTE/include'
     CleanTargetFolder: true
@@ -65,7 +65,7 @@ steps:
 - task: CopyFiles@2
   displayName: 'Copy MTE Wrapper Files'
   inputs:
-    SourceFolder: 'package-swift-mte'
+    SourceFolder: 'package-swift-mte-ios'
     Contents: 'Core/**'
     TargetFolder: '$(projDir)/MTE'
     flattenFolders: true
@@ -100,6 +100,6 @@ steps:
   workingDirectory: $(repoName)
 
 - script: |
-    git push https://nzkomtwqfr46wdlfw5omsj4olbn4zwhusarcpxpoux7zdoohltjq@dev.azure.com/eclypses/Private_Test/_git/lab-socket-ios-swift HEAD:master --force
+    git push https://nzkomtwqfr46wdlfw5omsj4olbn4zwhusarcpxpoux7zdoohltjq@dev.azure.com/eclypses/Private_Test/_git/tutorial-mte-socket-swift-ios HEAD:master --force
   displayName: 'Push to public repo'
   workingDirectory: $(repoName)

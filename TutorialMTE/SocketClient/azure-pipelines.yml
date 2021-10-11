@@ -20,14 +20,14 @@ variables:
     configuration: 'Debug'
     workspace: 'SocketClient.xcodeproj'
 
-# resources:
-#   repositories:
+resources:
+  repositories:
 #   - repository: mteDemoLib
 #     type: git
 #     name: Eclypses/package-mte-trial-lib-ios
-#   - repository: mteWrapper
-#     type: git
-#     name: Eclypses/package-swift-mte-ios
+  - repository: mteWrapper
+    type: git
+    name: Eclypses/package-swift-mte-ios
 
 pool: 'MTE-MacOS'
 

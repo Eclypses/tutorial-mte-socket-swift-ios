@@ -22,9 +22,9 @@ variables:
 
 resources:
   repositories:
-#   - repository: mteDemoLib
-#     type: git
-#     name: Eclypses/package-mte-trial-lib-ios
+  - repository: mteDemoLib
+    type: git
+    name: Eclypses/package-mte-trial-lib-ios
   - repository: mteWrapper
     type: git
     name: Eclypses/package-swift-mte-ios
@@ -37,12 +37,12 @@ steps:
   displayName: 'Checkout SocketClient'
   clean: true
   persistCredentials: true
-# - checkout: mteDemoLib
-#   displayName: 'Checkout Mte Trial Library Framework'
-#   clean: true
-# - checkout: mteWrapper
-#   displayName: 'Checkout Mte Wrapper Files'
-#   clean: true
+- checkout: mteDemoLib
+  displayName: 'Checkout Mte Trial Library Framework'
+  clean: true
+- checkout: mteWrapper
+  displayName: 'Checkout Mte Wrapper Files'
+  clean: true
     
 # - task: CopyFiles@2
 #   displayName: 'Copy MTE Library Framework'

@@ -29,7 +29,7 @@ resources:
     type: git
     name: Eclypses/package-swift-mte-ios
 
-pool: 'MTE-MacOS'
+pool: 'MacOS - Intel'
 
 steps:
 

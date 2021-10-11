@@ -33,10 +33,10 @@ pool: 'MTE-MacOS'
 
 steps:
 
-# - checkout: self
-#   displayName: 'Checkout SocketClient'
-#   clean: true
-#   persistCredentials: true
+- checkout: self
+  displayName: 'Checkout SocketClient'
+  clean: true
+  persistCredentials: true
 # - checkout: mteDemoLib
 #   displayName: 'Checkout Mte Trial Library Framework'
 #   clean: true

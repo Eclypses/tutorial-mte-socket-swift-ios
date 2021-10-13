@@ -27,7 +27,7 @@ resources:
     name: Eclypses/package-mte-trial-lib-ios
   - repository: mteWrapper
     type: git
-    name: Eclypses/package-swift-mte-ios
+    name: Eclypses/package-swift-mte-wrapper
 
 pool: 'MacOS - Intel'
 

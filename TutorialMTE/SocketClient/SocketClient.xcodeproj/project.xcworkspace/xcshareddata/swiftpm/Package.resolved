@@ -12,10 +12,10 @@
       },
       {
         "package": "SwiftMTE",
-        "repositoryURL": "https://cos-ado.eclypses.com/DefaultCollection/Eclypses/_git/package-swift-mte-ios",
+        "repositoryURL": "https://cos-ado.eclypses.com/DefaultCollection/Eclypses/_git/package-swift-mte-wrapper",
         "state": {
           "branch": "master",
-          "revision": "808a73d0ba4214451facfb7efeb1953917708a0a",
+          "revision": "9463e3f443bbebc154bc3ba9645a63fc71769bd6",
           "version": null
         }
       }

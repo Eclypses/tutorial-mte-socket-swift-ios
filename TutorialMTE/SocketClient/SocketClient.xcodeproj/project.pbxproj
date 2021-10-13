@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D01743C1267C11A10038C06A /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01743C0267C11A10038C06A /* Enums.swift */; };
-		D039E0D72710B53800257406 /* mte.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D039E0D62710B53800257406 /* mte.xcframework */; };
-		D039E0DC2710E07300257406 /* SwiftMTE in Frameworks */ = {isa = PBXBuildFile; productRef = D039E0DB2710E07300257406 /* SwiftMTE */; };
 		D07518B52613E2E10091CFB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07518B42613E2E10091CFB3 /* AppDelegate.swift */; };
 		D07518B72613E2E10091CFB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07518B62613E2E10091CFB3 /* SceneDelegate.swift */; };
 		D07518B92613E2E10091CFB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07518B82613E2E10091CFB3 /* ViewController.swift */; };
@@ -19,6 +17,8 @@
 		D07518F326150E7C0091CFB3 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07518F126150E7C0091CFB3 /* AppSettings.swift */; };
 		D07518F426150E7C0091CFB3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07518F226150E7C0091CFB3 /* Extensions.swift */; };
 		D07518F826150EAF0091CFB3 /* UpdateTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07518F726150EAF0091CFB3 /* UpdateTextView.swift */; };
+		D0EF455F27162BDB00472885 /* SwiftMTE in Frameworks */ = {isa = PBXBuildFile; productRef = D0EF455E27162BDB00472885 /* SwiftMTE */; };
+		D0EF45612716313200472885 /* mte.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EF45602716313200472885 /* mte.xcframework */; };
 		D0F83D482703AB6200096BA6 /* iOS Swift - Update MTE Version and Language Wrapper.docx in Resources */ = {isa = PBXBuildFile; fileRef = D0F83D462703AB6200096BA6 /* iOS Swift - Update MTE Version and Language Wrapper.docx */; };
 		D0F83D522704B76900096BA6 /* SocketClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F83D512704B76900096BA6 /* SocketClientTests.swift */; };
 /* End PBXBuildFile section */
@@ -35,7 +35,6 @@
 
 /* Begin PBXFileReference section */
 		D01743C0267C11A10038C06A /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
-		D039E0D62710B53800257406 /* mte.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = mte.xcframework; path = "../../../SourcePackages/checkouts/package-mte-trial-lib-ios/Sources/Mte/mte.xcframework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D07518B12613E2E10091CFB3 /* SocketClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocketClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D07518B42613E2E10091CFB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D07518B62613E2E10091CFB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		D07518F126150E7C0091CFB3 /* AppSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		D07518F226150E7C0091CFB3 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D07518F726150EAF0091CFB3 /* UpdateTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTextView.swift; sourceTree = "<group>"; };
+		D0EF45602716313200472885 /* mte.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = mte.xcframework; path = "../../../../../Library/Developer/Xcode/DerivedData/SocketClient-aejhncusbfonkudfrwaayxthylxc/SourcePackages/checkouts/package-mte-trial-lib-ios/Sources/Mte/mte.xcframework"; sourceTree = "<group>"; };
 		D0F83D462703AB6200096BA6 /* iOS Swift - Update MTE Version and Language Wrapper.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iOS Swift - Update MTE Version and Language Wrapper.docx"; sourceTree = "<group>"; };
 		D0F83D4F2704B76900096BA6 /* SocketClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocketClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F83D512704B76900096BA6 /* SocketClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketClientTests.swift; sourceTree = "<group>"; };
@@ -57,8 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D039E0D72710B53800257406 /* mte.xcframework in Frameworks */,
-				D039E0DC2710E07300257406 /* SwiftMTE in Frameworks */,
+				D0EF45612716313200472885 /* mte.xcframework in Frameworks */,
+				D0EF455F27162BDB00472885 /* SwiftMTE in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +75,7 @@
 		D039E0D52710B53800257406 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D039E0D62710B53800257406 /* mte.xcframework */,
+				D0EF45602716313200472885 /* mte.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -160,7 +160,7 @@
 			);
 			name = SocketClient;
 			packageProductDependencies = (
-				D039E0DB2710E07300257406 /* SwiftMTE */,
+				D0EF455E27162BDB00472885 /* SwiftMTE */,
 			);
 			productName = SocketClient;
 			productReference = D07518B12613E2E10091CFB3 /* SocketClient.app */;
@@ -213,7 +213,7 @@
 			);
 			mainGroup = D07518A82613E2E10091CFB3;
 			packageReferences = (
-				D039E0DA2710E07300257406 /* XCRemoteSwiftPackageReference "package-swift-mte-ios" */,
+				D0EF455D27162BDB00472885 /* XCRemoteSwiftPackageReference "package-swift-mte-wrapper" */,
 			);
 			productRefGroup = D07518B22613E2E10091CFB3 /* Products */;
 			projectDirPath = "";
@@ -544,9 +544,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D039E0DA2710E07300257406 /* XCRemoteSwiftPackageReference "package-swift-mte-ios" */ = {
+		D0EF455D27162BDB00472885 /* XCRemoteSwiftPackageReference "package-swift-mte-wrapper" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://cos-ado.eclypses.com/DefaultCollection/Eclypses/_git/package-swift-mte-ios";
+			repositoryURL = "https://cos-ado.eclypses.com/DefaultCollection/Eclypses/_git/package-swift-mte-wrapper";
 			requirement = {
 				branch = master;
 				kind = branch;
@@ -555,9 +555,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D039E0DB2710E07300257406 /* SwiftMTE */ = {
+		D0EF455E27162BDB00472885 /* SwiftMTE */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D039E0DA2710E07300257406 /* XCRemoteSwiftPackageReference "package-swift-mte-ios" */;
+			package = D0EF455D27162BDB00472885 /* XCRemoteSwiftPackageReference "package-swift-mte-wrapper" */;
 			productName = SwiftMTE;
 		};
 /* End XCSwiftPackageProductDependency section */

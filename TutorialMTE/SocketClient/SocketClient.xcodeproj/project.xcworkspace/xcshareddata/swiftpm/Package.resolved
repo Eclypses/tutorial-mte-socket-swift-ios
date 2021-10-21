@@ -6,17 +6,17 @@
         "repositoryURL": "https://cos-ado.eclypses.com/DefaultCollection/Eclypses/_git/package-mte-trial-lib-ios",
         "state": {
           "branch": null,
-          "revision": "c56f9db778a4bed97059153c16fd54bbb9fd7587",
+          "revision": "f3d047857ea0f5057a929ccafc005fbf9e30716f",
           "version": "1.5.0"
         }
       },
       {
         "package": "SwiftMTE",
-        "repositoryURL": "https://cos-ado.eclypses.com/DefaultCollection/Eclypses/_git/package-swift-mte-wrapper",
+        "repositoryURL": "https://cos-ado.eclypses.com/DefaultCollection/Eclypses/_git/package-swift-wrapper-ios",
         "state": {
-          "branch": "master",
-          "revision": "9463e3f443bbebc154bc3ba9645a63fc71769bd6",
-          "version": null
+          "branch": null,
+          "revision": "0a98b1072cf0f108163fac0492a6f7570bbdfc5c",
+          "version": "1.5.0"
         }
       }
     ]

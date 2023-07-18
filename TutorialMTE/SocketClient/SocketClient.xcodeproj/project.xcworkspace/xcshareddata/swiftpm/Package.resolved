@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "package-swift-ecdhp256",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Eclypses/package-swift-ecdhp256.git",
+      "state" : {
+        "branch" : "public",
+        "revision" : "8223f64bbed01b48034185b465e5301ebaf1a3b3"
+      }
+    }
+  ],
+  "version" : 2
+}
